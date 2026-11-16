@@ -5,6 +5,13 @@ public class Serie {
     private String plataforma;
     private Double nota;
 
+    @Override
+
+    public String toString(){
+        return String.format("Série: %s%n\tPlataforma: %s%n\t Nota: %s", nome, plataforma, nota);
+
+    }
+
     public Serie(String nome, String plataforma){
         this.nome = nome;
         this.plataforma = plataforma;
