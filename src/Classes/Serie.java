@@ -15,11 +15,13 @@ public class Serie {
     public Serie(String nome, String plataforma){
         this.nome = nome;
         this.plataforma = plataforma;
+        this.nota = 0.0;
     }
 
     public Serie(String nome) {
         this.nome = nome;
         this.plataforma = "Plataforma indefinida";
+        this.nota = 0.0;
     }
 
     public String getNome() {
