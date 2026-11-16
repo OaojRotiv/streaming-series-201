@@ -1,17 +1,18 @@
 package Classes;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Catalogo {
-    private ArrayList<Serie> serieArrayList = new ArrayList<>();
+    private List<Serie> serieArrayList = new ArrayList<>();
 
     public void addSerie(Serie serie){
         serieArrayList.add(serie);
     }
 
-    public Serie getSerie(String nomeBusca){
+    public Serie buscarSerie(String nomeBusca){
         for (Serie s : serieArrayList){
-            if(s.getNome()==nomeBusca){
+            if(s.getNome().toLowerCase().equals(nomeBusca.toLowerCase())){
                 return s;
             }
         }
