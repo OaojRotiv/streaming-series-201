@@ -7,12 +7,12 @@ public class Serie {
 
     @Override
 
-    public String toString(){
-        return String.format("Série: %s%n\tPlataforma: %s%n\t Nota: %s", nome, plataforma, nota);
+    public String toString() {
+        return String.format("Série: %s%n\tPlataforma: %s%n\tNota: %s", nome, plataforma, nota);
 
     }
 
-    public Serie(String nome, String plataforma){
+    public Serie(String nome, String plataforma) {
         this.nome = nome;
         this.plataforma = plataforma;
         this.nota = 0.0;
@@ -36,16 +36,13 @@ public class Serie {
         return nota;
     }
 
-    public void setNota(Double nota) {
+    public boolean setNota(Double nota) {
 
-
-            if(nota>=0||nota<=10){
-             this.nota = nota;
-            }else{
-                System.out.println("Nota Inválida!");
-            }
-
-
+        if (nota >= 0 || nota <= 10) {
+            this.nota = nota;
+            return true;
+        }
+        return false;
 
     }
 }
