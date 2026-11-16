@@ -38,7 +38,7 @@ public class Serie {
 
     public boolean setNota(Double nota) {
 
-        if (nota >= 0 || nota <= 10) {
+        if (nota >= 0 && nota <= 10) {
             this.nota = nota;
             return true;
         }
